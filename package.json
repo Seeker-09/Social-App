@@ -10,7 +10,8 @@
     "sequelize": "^6.21.3"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "seeds": "node seeds/index.js"
   },
   "name": "y",
   "description": "",
