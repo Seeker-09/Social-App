@@ -47,4 +47,17 @@ router.get("/:id", (req, res) => {
     })
 })
 
+// Create a post
+router.post("/", (req, res) => {
+    Post.create({
+        title: req.body.title
+        // create user reference here using session
+    })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err)
+    })
+})
+
 module.exports = router
