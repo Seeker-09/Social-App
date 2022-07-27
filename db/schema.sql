@@ -1,0 +1,8 @@
+DROP DATABASE IF EXISTS beer_db;
+
+CREATE DATABASE beer_db;
+
+CREATE TABLE reviews(
+  id INTEGER NOT NULL,
+  review_int INTEGER NOT NULL
+);
