@@ -27,9 +27,46 @@
     </aside>
     <div class="reviews">
       {{{body}}}
+      <section>
+        <h2>Posts</h2>
+        
+        <!-- form feild -->
+        <form>
+          <!-- Created by -->
+          <div></div>
+          <!-- Beer Name -->
+          <div>
+            <label for="post-title">Beer Name</label>
+            <input type="text" id="post-title" name="post-title" />
+          </div>
+          <!-- Beer Type Dropdown -->
+          <div>
+            <label for="beer-type">Choose the type of beer</label>
+            <select name="beer-type" id="beer-type">
+              <option value="lager">Lager</option>
+              <option value="ipa">IPA</option>
+              <option value="pilsner">Pilsner</option>
+              <option value="stout">Stout</option>
+              <option value="porter">Porter</option>
+              <option value="sour">Sour</option>
+            </select>
+          </div>
+          <!-- Rating scale 1-10 -->
+          <div>
+            <label for="rating">Rate the beer on a scale 1-10:</label>
+            <input type="number" id="rating" name="rating" min="1" max="10" />
+          </div>
+          <!-- Comments -->
+          <div>
+            <label for="comments">Comments or thoughts on the beer</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+          </div>
+          <button type="submit" class="btn">Post</button>
+        </form>
+      </section>
     </div>
   </main>
-  {{#if loggedIn}}
+  {{#if loggedIn}}  
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
