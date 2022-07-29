@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { review, reviews } = require('../models');
 
 router.get('/', (req, res) => {
-    res.send("in home routes")
+    res.render("homepage")
 })
 
 // GET all reviews for homepage
