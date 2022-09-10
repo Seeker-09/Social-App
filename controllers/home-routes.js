@@ -6,30 +6,30 @@ router.get('/', (req, res) => {
 })
 
 // GET all reviews for homepage
-router.get('/', async (req, res) => {
-    try {
-      const dbBeerData = await Gallery.findAll({
-        include: [
-          {
-            model: review,
-            attributes: ['filename', 'description']
-          }
-        ]
-      });
+// router.get('/', async (req, res) => {
+//     try {
+//       const dbBeerData = await Gallery.findAll({
+//         include: [
+//           {
+//             model: review,
+//             attributes: ['filename', 'description']
+//           }
+//         ]
+//       });
   
-      const reviews = dbBeerData.map(review =>
-        reviews.get({ plain: true })
-      );
-      // renders homepage if logged in
-      res.render('homepage', {
-        reviews,
-        loggedIn: req.session.loggedIn
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  });
+//       const reviews = dbBeerData.map(review =>
+//         reviews.get({ plain: true })
+//       );
+//       // renders homepage if logged in
+//       res.render('homepage', {
+//         reviews,
+//         loggedIn: req.session.loggedIn
+//       });
+//     } catch (err) {
+//       console.log(err);
+//       res.status(500).json(err);
+//     }
+//   });
   
   // GET one review
   router.get('/review/:id', async (req, res) => {
