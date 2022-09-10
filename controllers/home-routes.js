@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const { review, reviews } = require('../models');
 
-router.get('/', (req, res) => {
-    res.render("homepage")
-})
+// router.get('/', (req, res) => {
+//     res.render("homepage")
+// })
 
 // GET all reviews for homepage
 // router.get('/', async (req, res) => {
